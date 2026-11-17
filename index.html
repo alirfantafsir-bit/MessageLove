@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Kamu yang Tercinta 💖</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <div class="container">
+        <!-- Layar Sambutan dengan Tombol -->
+        <div id="welcome-screen">
+            <h1 class="welcome-title">Ada sebuah pesan untuk Hilya...</h1>
+            <p class="welcome-subtitle">Sentuh tombol di bawah untuk membukanya.</p>
+            <button class="open-btn" onclick="openLetter()">
+                <span>Buka Surat Cinta</span>
+                <span>💌</span>
+            </button>
+        </div>
+
+        <!-- Layar Isi Surat -->
+        <div id="letter-screen">
+            <div class="letter-header">
+                <h2>Untuk Nur Hilya yang Tercinta</h2>
+                <div class="letter-date">Spesial Untukmu</div>
+            </div>
+            <div class="letter-body">
+                <p>Halo,</p>
+                <p>Aku hanya ingin menuliskan beberapa patah kata sederhana ini untuk mengingatkanmu betapa berartinya kehadiranmu di dalam hidupku. Setiap detik yang berjalan terasa jauh lebih indah sejak ada kamu di sisiku.</p>
+                <p>Terima kasih karena selalu menjadi alasan di balik senyumku, tempatku pulang untuk berbagi cerita, dan seseorang yang membuat hari-hari biasa terasa luar biasa istimewa.</p>
+                <p>Semoga pesan kecil ini bisa menghangatkan harimu, sama seperti senyumanmu yang selalu berhasil mencerahkan duniaku.</p>
+            </div>
+            <div class="letter-footer">
+                <p>Dengan segenap rasa,</p>
+                <div class="signature">Tafsirul Irfan</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openLetter() {
+            const welcomeScreen = document.getElementById('welcome-screen');
+            const letterScreen = document.getElementById('letter-screen');
+
+            // Sembunyikan layar sambutan dengan animasi
+            welcomeScreen.classList.add('hide-welcome');
+
+            setTimeout(() => {
+                welcomeScreen.style.display = 'none';
+                // Munculkan layar surat
+                letterScreen.classList.add('show-letter');
+            }, 400);
+        }
+    </script>
+</body>
+</html>
